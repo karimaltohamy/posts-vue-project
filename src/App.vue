@@ -3,12 +3,23 @@
   <router-view/>
 </template>
 <script>
+import { onBeforeMount } from 'vue'
+import { useStore } from 'vuex'
 import Header from "./components/Header"
 
   export default {
+    setup() {
+      const store = useStore()
+
+      onBeforeMount(() => {
+        store.dispatch("fetchUser")
+      })
+
+    },
     components: {
       Header,
     }
+  
   }
 </script>
 
