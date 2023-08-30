@@ -35,21 +35,23 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .header {
   padding: 10px 0;
-}
 
-.header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-.header .container .links {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    
+  }
 }
 
 .header .info {

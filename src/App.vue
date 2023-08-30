@@ -23,7 +23,9 @@ import Header from "./components/Header"
   }
 </script>
 
-<style>
+<style lang="scss">
+$main-color: blue;
+
 * {
   margin: 0;
   padding: 0;

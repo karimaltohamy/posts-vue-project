@@ -31,6 +31,7 @@ export default {
 
     const getAllProducts = async () => {
       store.dispatch("getAllProducts");
+      
     };
 
     onMounted(() => {
