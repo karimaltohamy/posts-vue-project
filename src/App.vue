@@ -32,6 +32,11 @@ $main-color: blue;
   box-sizing: border-box;
 }
 
+html:lang(ar) {
+  direction: rtl;
+  text-align: right;
+}
+
 a {
   color: inherit !important;
   text-decoration: none !important;

@@ -62,7 +62,7 @@ export default {
       const validate = await v$.value.$validate();
 
       if (validate) {
-        store.dispatch("register", formData.value);
+        store.dispatch("register", formData);
       }
     };
 

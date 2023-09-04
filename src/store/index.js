@@ -7,7 +7,8 @@ export default createStore({
     products: [],
     productDetails: {},
     favorites: [],
-    user: null
+    user: null,
+    lang:  localStorage.getItem("lang") || "en"
   },
   mutations: {
     allProducts(state, payload) {
@@ -27,6 +28,10 @@ export default createStore({
     },
     clearUser(state) {
       state.user = null
+    },
+    changeLang(state, payload) {
+      state.lang = payload
+      localStorage.setItem("lang", payload)
     }
   },
   actions: {

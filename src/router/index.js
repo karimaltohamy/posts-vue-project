@@ -4,6 +4,7 @@ import Products from "../views/Products.vue";
 import ProductDetails from "../views/ProductDetails.vue";
 import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
+import Table from "../views/Table.vue";
 import { auth } from "@/firebase";
 
 const routes = [
@@ -40,6 +41,11 @@ const routes = [
     path: "/register",
     name: "register",
     component: Register,
+  },
+  {
+    path: "/table",
+    name: "table",
+    component: Table,
   },
 ];
 

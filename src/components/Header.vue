@@ -6,10 +6,15 @@
       </div>
       <div class="info">
         <div class="links">
-          <router-link class="link" to="/">Home</router-link>
-          <router-link class="link" to="/products">Products</router-link>
+          <router-link class="link" to="/">{{ $t("Home") }}</router-link>
+          <router-link class="link" to="/products">{{$t("Products")}}</router-link>
+          <router-link class="link" to="/table">{{$t("Table")}}</router-link>
         </div>
-        <button class="btn_logout" @click="logout">Logout</button>
+        <button class="btn_logout"  @click="logout">{{$t("Logout")}}</button>
+        <select name="" id="" v-model="lang" @change="handleChangeLang($event)">
+          <option value="en">English</option>
+          <option value="ar">عربي</option>
+        </select>
       </div>
     </div>
   </div>
@@ -25,12 +30,21 @@ export default {
     const user = computed(() => {
       return store.state.user;
     });
+    const lang = computed(() => {
+      return store.state.lang
+    })
+       
 
     const logout = () => {
       store.dispatch("logout");
     };
 
-    return { logout, user };
+    const handleChangeLang = (e) => {
+      store.commit("changeLang",e.target.value)
+      window.location.reload()
+    }
+
+    return { logout, user, handleChangeLang , lang};
   },
 };
 </script>
@@ -50,7 +64,7 @@ export default {
       gap: 10px;
     }
 
-    
+
   }
 }
 
