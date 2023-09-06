@@ -8,7 +8,6 @@
         <div class="links">
           <router-link class="link" to="/">{{ $t("Home") }}</router-link>
           <router-link class="link" to="/products">{{$t("Products")}}</router-link>
-          <router-link class="link" to="/table">{{$t("Table")}}</router-link>
         </div>
         <button class="btn_logout"  @click="logout">{{$t("Logout")}}</button>
         <select name="" id="" v-model="lang" @change="handleChangeLang($event)">
